@@ -35,7 +35,7 @@ function MangAdmin:CreateWhoSection()
     linkifier = MangAdmin.db.account.style.color.linkifier
   }
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_showwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -55,7 +55,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_ShowWhoButton"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_resetwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -75,7 +75,7 @@ function MangAdmin:CreateWhoSection()
     text = "RESET"
   })
    
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_whisperwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -95,7 +95,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_whisperbutton"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_summonwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -115,7 +115,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_SummonWhoButton"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_gocharwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -135,7 +135,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_GoCharWhoButton"]
   })
   
-  FrameLib:BuildButton({--Mail
+  button = FrameLib:BuildButton({--Mail
     name = "ma_answerwhobutton",
     group = "who",
     parent = ma_midframe,
@@ -155,7 +155,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_AnswerWhoButton"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_customizebutton",
     group = "who",
     parent = ma_midframe,
@@ -175,7 +175,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_customize"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_chardeletebutton",
     group = "who",
     parent = ma_midframe,
@@ -195,7 +195,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_chardelete"]
   })
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_charrenamebutton",
     group = "who",
     parent = ma_midframe,
@@ -215,7 +215,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_charrename"]
   })
 
-  FrameLib:BuildButton({--Kick
+  button = FrameLib:BuildButton({--Kick
     name = "ma_deletewhobutton",
     group = "who",
     parent = ma_midframe,
@@ -235,7 +235,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_DeleteWhoButton"]
   })
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_1daybanbutton",
     group = "who",
     parent = ma_midframe,
@@ -255,7 +255,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_1daybanbutton"]
   })
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_permbanbutton",
     group = "who",
     parent = ma_midframe,
@@ -275,7 +275,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_permbanbutton"]
   })
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_jailabutton",
     group = "who",
     parent = ma_midframe,
@@ -295,7 +295,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_jailabutton"]
   })
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_jailhbutton",
     group = "who",
     parent = ma_midframe,
@@ -315,7 +315,7 @@ function MangAdmin:CreateWhoSection()
     text = Locale["ma_who_jailhbutton"]
   })
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_who_unjailbutton",
     group = "who",
     parent = ma_midframe,
@@ -462,7 +462,7 @@ function MangAdmin:CreateWhoSection()
     }
   })
  
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_whoscrollframe1",
     JustifyH = "LEFT",
     group = "who",
@@ -482,10 +482,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe2",
     group = "who",
     parent = ma_midframe,
@@ -504,10 +505,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe3",
     group = "who",
     parent = ma_midframe,
@@ -526,10 +528,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe4",
     group = "who",
     parent = ma_midframe,
@@ -548,10 +551,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe5",
     group = "who",
     parent = ma_midframe,
@@ -570,10 +574,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe6",
     group = "who",
     parent = ma_midframe,
@@ -592,10 +597,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe7",
     group = "who",
     parent = ma_midframe,
@@ -614,10 +620,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe8",
     group = "who",
     parent = ma_midframe,
@@ -636,10 +643,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe9",
     group = "who",
     parent = ma_midframe,
@@ -658,10 +666,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe10",
     group = "who",
     parent = ma_midframe,
@@ -680,10 +689,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe11",
     group = "who",
     parent = ma_midframe,
@@ -702,10 +712,11 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-    FrameLib:BuildButton({
+    button = FrameLib:BuildButton({
     name = "ma_whoscrollframe12",
     group = "who",
     parent = ma_midframe,
@@ -724,8 +735,9 @@ function MangAdmin:CreateWhoSection()
       width = 390,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
 end
 
