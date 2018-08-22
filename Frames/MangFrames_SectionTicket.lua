@@ -331,7 +331,7 @@ function MangAdmin:CreateTicketSection()
     }
   })
  
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe1",
     JustifyH = "LEFT",
     group = "ticket",
@@ -351,10 +351,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe2",
     group = "ticket",
     parent = ma_midframe,
@@ -373,10 +374,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe3",
     group = "ticket",
     parent = ma_midframe,
@@ -395,10 +397,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe4",
     group = "ticket",
     parent = ma_midframe,
@@ -417,10 +420,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe5",
     group = "ticket",
     parent = ma_midframe,
@@ -439,10 +443,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe6",
     group = "ticket",
     parent = ma_midframe,
@@ -461,10 +466,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe7",
     group = "ticket",
     parent = ma_midframe,
@@ -483,10 +489,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe8",
     group = "ticket",
     parent = ma_midframe,
@@ -505,10 +512,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe9",
     group = "ticket",
     parent = ma_midframe,
@@ -527,10 +535,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe10",
     group = "ticket",
     parent = ma_midframe,
@@ -549,10 +558,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe11",
     group = "ticket",
     parent = ma_midframe,
@@ -571,10 +581,11 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
-  FrameLib:BuildButton({
+  button = FrameLib:BuildButton({
     name = "ma_ticketscrollframe12",
     group = "ticket",
     parent = ma_midframe,
@@ -593,7 +604,8 @@ function MangAdmin:CreateTicketSection()
       width = 440,
       height = 16
     },
-    script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
+    --script = {{"OnShow", function() this:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
   })
+  button.script = {{"OnShow", function() button:RegisterForClicks("LeftButtonDown", "RightButtonDown") end}}
 
 end
