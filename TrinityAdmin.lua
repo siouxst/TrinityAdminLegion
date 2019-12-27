@@ -35,7 +35,7 @@ gettingGOBinfoinfo=0
 
 MAJOR_VERSION = "TrinityAdmin V.2 3.3.5a"
 MINOR_VERSION = "$Revision: 2 $"
-ROOT_PATH     = "Interface\\AddOns\\TrinityAdmin\\"
+ROOT_PATH     = "Interface\\AddOns\\TrinityAdminLegion\\"
 local cont = ""
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
